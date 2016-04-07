@@ -40,7 +40,7 @@ for root, dirs, files in os.walk(basedir):
             filelist = list()
 
             for md5s in doc.xpath("//@CHECKSUM"):
-                md5list.append(md5s)
+                md5list.append(md5s.upper())
             #print(md5list)
             for ref in doc.xpath('//@xlink:href',namespaces={'xlink': 'http://www.w3.org/1999/xlink'}):
                 # figure out how one can avoid echo -n to not have b and  \n (new lines and breaks) in output
