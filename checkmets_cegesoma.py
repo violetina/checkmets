@@ -8,6 +8,9 @@ from lxml import etree
 
 
 
+
+
+
 basedir = raw_input('full path to start dir: ')
 #basedir = '/home/tina/onderwijs/ARA_G05607_1915-02-08_01_000/'
 pwd = os.getcwd()
@@ -43,7 +46,7 @@ for root, dirs, files in os.walk(basedir):
                 for i in range(0,x):
                     #print(i)
                     md5 = root.xpath(expr, name = "messageDigest")[i].text
-                    md5list.append(md5)
+                    md5list.append(md5.upper())
                 #print(md5list)
 
             except Exception as e:
